@@ -149,9 +149,14 @@
 		"spaced-comment": 1,
 		"wrap-regex": 0,
 		"no-var": 0,
-		"generator-star": 0,
+		"generator-star": 0
 	},
 	"globals": {
 		"Promise": true
+	},
+	"settings": {
+		"react": {
+			"version": "require('./package.json').dependencies.react"
+		}
 	}
 }

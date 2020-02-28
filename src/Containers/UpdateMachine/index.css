@@ -1,0 +1,16 @@
+.updateMachine {
+	display: flex;
+}
+
+.formWrapper {
+	width: 100%;
+}
+
+.formWrapper button {
+	float: right;
+	margin-top: 20px;
+}
+
+.progressBarWrapper {
+	width: 100%;
+}
