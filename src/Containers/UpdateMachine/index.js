@@ -12,7 +12,7 @@ export const UpdateMachine = ({ ...props }) => {
 		machines, getMachineById, updateMachine, history, match: { params: { id = '' } = {} } = {}
 	} = props;
 	const machine = machines.find(machine => machine.id === id);
-	const { name = '' } = machine || {};
+	const { name = '', health = 0 } = machine || {};
 
 	const [machineName, setMachineName] = useState(name);
 	const [error, setError] = useState('');
@@ -58,7 +58,7 @@ export const UpdateMachine = ({ ...props }) => {
 				</div>
 			</div>
 			<div className="progressBarWrapper">
-				<Health health={5} showInfo strokeWidth={21} />
+				<Health health={health} showInfo strokeWidth={21} />
 			</div>
 		</div>
 	);
