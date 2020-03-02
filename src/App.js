@@ -13,7 +13,7 @@ function App ({ ...props }) {
 	useEffect(() => {
 		const ws = new WebSocket('ws://localhost:1337');
 		ws.onopen = () => {
-			console.info('Yeah..!! The connection is established')
+			console.info('Yeah..!! The connection is established');
 		};
 		ws.onmessage = (data) => {
 			updateMachinesData(data);
@@ -40,10 +40,8 @@ App.propTypes = {
 	updateMachinesData: PropTypes.func
 };
 
-const mapStateToProps = () => {};
-
 const mapDispatchToProps = dispatch => bindActionCreators({
 	updateMachinesData
 }, dispatch);
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

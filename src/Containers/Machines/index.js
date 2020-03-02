@@ -32,9 +32,9 @@ const columns = [
 		render: (machine) => (
 			<span>
 				<NavLink to={`/machines/${machine.id}`}>Edit</NavLink>
-		  	</span>
-		),
-	},
+			</span>
+		)
+	}
 ];
 
 export const Machines = ({ ...props }) => {
@@ -43,7 +43,7 @@ export const Machines = ({ ...props }) => {
 		getAllMachines();
 	}, []);
 	return (
-		<Table dataSource={machines} columns={columns} pagination={false} />
+		<Table dataSource={machines} columns={columns} pagination={false} rowKey="id" />
 	);
 };
 

@@ -55,7 +55,9 @@ export default (state = initialState, { type, payload }) => {
 			return { ...state, loading: false, error: true, errorMessage: payload };
 		case WS_UPDATE_MACHINES_DATA:
 			const index = state.data.findIndex(machine => machine.id === payload.id);
-			if (index === -1) { return { ...state }; }
+			if (index === -1) {
+				return { ...state };
+			}
 			return {
 				...state,
 				data: [
